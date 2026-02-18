@@ -4,6 +4,7 @@
 
 import { fetchBikeById, fetchAllBikes, formatPrice, getLocalizedField } from './api.js';
 import { initI18n, getCurrentLanguage, t } from './i18n.js';
+import { setupNavbar, setupMobileMenu } from './navbar.js';
 
 // State
 let currentBike = null;
@@ -33,6 +34,8 @@ const backToTop = document.getElementById('backToTop');
 // Initialize
 async function init() {
   await initI18n();
+  setupNavbar();
+  setupMobileMenu();
 
   const bikeId = getIdFromURL();
 

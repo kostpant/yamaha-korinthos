@@ -5,6 +5,7 @@
 import { initI18n, getCurrentLanguage, t } from './i18n.js';
 import { fetchAllBikes, formatPrice, getLocalizedField } from './api.js';
 import { FEATURES } from './config.js';
+import { setupNavbar, setupMobileMenu } from './navbar.js';
 
 // ─────────────────────────────────────────────────────────────
 // Initialize on DOM load
@@ -13,8 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize i18n first
     await initI18n();
 
-    // Setup navbar scroll behavior
-    setupNavbar();
+    // Setup navbar scroll behavior (starts transparent on home)
+    setupNavbar(true);
 
     // Setup mobile menu
     setupMobileMenu();
@@ -24,51 +25,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         await loadFeaturedBikes();
     }
 });
-
-// ─────────────────────────────────────────────────────────────
-// Navbar Scroll Behavior (Glassmorphism)
-// ─────────────────────────────────────────────────────────────
-function setupNavbar() {
-    const navbar = document.getElementById('navbar');
-
-    function updateNavbar() {
-        if (window.scrollY > 100) {
-            navbar.classList.remove('navbar-transparent');
-            navbar.classList.add('navbar-solid');
-        } else {
-            navbar.classList.remove('navbar-solid');
-            navbar.classList.add('navbar-transparent');
-        }
-    }
-
-    // Initial check
-    updateNavbar();
-
-    // Listen to scroll
-    window.addEventListener('scroll', updateNavbar, { passive: true });
-}
-
-// ─────────────────────────────────────────────────────────────
-// Mobile Menu Toggle
-// ─────────────────────────────────────────────────────────────
-function setupMobileMenu() {
-    const toggle = document.getElementById('mobile-toggle');
-    const menu = document.getElementById('mobile-menu');
-
-    toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        menu.classList.toggle('active');
-    });
-
-    // Close menu when clicking a link
-    const menuLinks = menu.querySelectorAll('.mobile-menu-link');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            toggle.classList.remove('active');
-            menu.classList.remove('active');
-        });
-    });
-}
 
 // ─────────────────────────────────────────────────────────────
 // Load Featured Motorcycles

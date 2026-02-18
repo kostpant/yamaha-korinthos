@@ -3,6 +3,7 @@
    ═════════════════════════════════════════════════════════════ */
 
 import { initI18n } from './i18n.js';
+import { setupNavbar, setupMobileMenu } from './navbar.js';
 
 // DOM Elements
 const backToTop = document.getElementById('backToTop');
@@ -10,6 +11,8 @@ const backToTop = document.getElementById('backToTop');
 // Initialize
 async function init() {
   await initI18n();
+  setupNavbar();
+  setupMobileMenu();
   setupEventListeners();
   setupScrollListener();
 }
