@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags (will be updated by JS) -->
+  <title>Motorcycle Details | YAMAHA Motodesign Corinth</title>
+  <meta name="description" content="View details of this premium motorcycle at YAMAHA Motodesign Corinth.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/listing-detail.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico">
+
+  <!-- JSON-LD Schema (will be injected by JS) -->
+  <script type="application/ld+json" id="jsonLdSchema"></script>
+</head>
+
+<body>
+
+  <!-- ═════════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="navbar navbar-solid" id="navbar">
+    <div class="container navbar-container">
+      <a href="/index.html" class="navbar-logo" style="display: flex; align-items: center; gap: 8px;">
+        <img src="/assets/favicon.ico" alt="YAMAHA" style="width: 24px; height: 24px;">
+        <span style="font-weight: 700; font-size: 18px; font-family: 'Playfair Display', serif;">
+          YAMAHA Motodesign
+        </span>
+      </a>
+
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="navbar-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="listings.html" class="navbar-link" data-i18n="nav.inventory">Motorcycles</a></li>
+        <li><a href="about.html" class="navbar-link" data-i18n="nav.about">About Us</a></li>
+        <li><a href="contact.html" class="navbar-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <div class="lang-toggle">
+          <button data-lang="en" class="lang-btn">EN</button>
+          <button data-lang="gr" class="lang-btn active">GR</button>
+        </div>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link" data-i18n="nav.home">Home</a>
+      <a href="listings.html" class="mobile-menu-link" data-i18n="nav.inventory">Motorcycles</a>
+      <a href="about.html" class="mobile-menu-link" data-i18n="nav.about">About Us</a>
+      <a href="contact.html" class="mobile-menu-link" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════
+       BREADCRUMB
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="listings.html" data-i18n="nav.inventory">Motorcycles</a></li>
+        <li class="breadcrumb-current" id="breadcrumbModel">Loading...</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ═════════════════════════════════════════════════════════
+       LISTING DETAIL
+       ═══════════════════════════════════════════════════════ -->
+  <main class="listing-detail">
+    <div class="container">
+
+      <!-- Error State -->
+      <div class="error-state" id="errorState" style="display: none;">
+        <div class="error-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+        </div>
+        <h2 data-i18n="listing.not_found">Motorcycle Not Found</h2>
+        <p data-i18n="listing.not_found_text">The motorcycle you're looking for doesn't exist or has been removed.</p>
+        <a href="listings.html" class="btn btn-primary" data-i18n="listing.browse_all">Browse All Motorcycles</a>
+      </div>
+
+      <!-- Detail Layout -->
+      <div class="detail-layout" id="detailLayout">
+
+        <!-- Left Column: Gallery & Details -->
+        <div class="detail-left">
+
+          <!-- Main Gallery -->
+          <div class="gallery">
+            <div class="gallery__main">
+              <img id="mainImage" src="" alt="" loading="eager">
+              <div class="gallery__nav gallery__nav--prev" id="galleryPrev" aria-label="Previous image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </div>
+              <div class="gallery__nav gallery__nav--next" id="galleryNext" aria-label="Next image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="gallery__thumbs" id="galleryThumbs">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+
+          <!-- Description Tabs -->
+          <div class="description-section">
+            <div class="tab-toggle">
+              <button class="tab-btn active" data-lang="en" id="tabEn">English</button>
+              <button class="tab-btn" data-lang="gr" id="tabGr">Ελληνικά</button>
+            </div>
+
+            <div class="description-content">
+              <div class="description-text active" id="descEn">
+                <p id="descriptionEn">Loading...</p>
+              </div>
+              <div class="description-text" id="descGr">
+                <p id="descriptionGr">Loading...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specs Table -->
+          <div class="specs-section">
+            <h2 data-i18n="listing.specifications">Specifications</h2>
+            <div class="specs-table" id="specsTable">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Price & CTA -->
+        <div class="detail-right">
+          <div class="detail-sticky">
+
+            <!-- Price Card -->
+            <div class="price-card">
+              <div class="price-display" id="priceDisplay">Loading...</div>
+              <div class="condition-badge" id="conditionBadge">Loading...</div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+              <a href="tel:+302741022979" class="btn-cta btn-call">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <span data-i18n="listing.call_now">Call Now</span>
+              </a>
+
+              <a href="https://wa.me/302741022979" class="btn-cta btn-whatsapp" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <span data-i18n="listing.whatsapp">WhatsApp</span>
+              </a>
+
+              <a href="mailto:motodesign@yahoo.gr" class="btn-cta btn-email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span data-i18n="listing.send_email">Send Email</span>
+              </a>
+            </div>
+
+            <!-- Dealer Info Card -->
+            <div class="dealer-card">
+              <h3 data-i18n="listing.dealer_info">Dealer Information</h3>
+              <ul class="dealer-info-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Πατρών 60, Κόρινθος 20100</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                  <span>2741022979</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>motodesign@yahoo.gr</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span data-i18n="listing.business_hours">Mon-Fri 09:00-19:00</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Copy Link Button -->
+            <button class="btn-copy-link" id="copyLink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+              <span data-i18n="listing.copy_link">Copy Link</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Motorcycles -->
+      <section class="related-section">
+        <h2 data-i18n="listing.related">Related Motorcycles</h2>
+        <div class="related-grid" id="relatedGrid">
+          <!-- Injected by JS -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo" style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+            <img src="/assets/favicon.ico" alt="YAMAHA" style="width: 24px; height: 24px;">
+            <span style="font-weight: 700; font-size: 18px; font-family: 'Playfair Display', serif; color: #FFFFFF;">
+              YAMAHA Motodesign
+            </span>
+          </div>
+          <p class="footer-tagline" data-i18n="footer.tagline">Your trusted YAMAHA dealer in Corinth since 1998</p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-i18n="footer.quick_links">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="listings.html" data-i18n="nav.inventory">Motorcycles</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 data-i18n="footer.contact_title">Contact Us</h4>
+          <ul>
+            <li>
+              <strong data-i18n="footer.address">Address:</strong><br>
+              Πατρών 60, Κόρινθος 20100
+            </li>
+            <li>
+              <strong data-i18n="footer.phone">Phone:</strong><br>
+              <a href="tel:+302741022979">2741 022979</a>
+            </li>
+            <li>
+              <strong data-i18n="footer.email">Email:</strong><br>
+              <a href="mailto:motodesign@yahoo.gr">motodesign@yahoo.gr</a>
+            </li>
+            <li>
+              <strong data-i18n="footer.hours">Business Hours:</strong><br>
+              <span data-i18n="footer.hours_value">Mon-Fri: 9:00-17:00, Sat: 9:00-14:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 YAMAHA Motodesign. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/YAMAHAKORINTHOS/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/302741022979" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span data-i18n="listing.link_copied">Link copied to clipboard!</span>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script type="module" src="js/config.js"></script>
+  <script type="module" src="js/api.js"></script>
+  <script type="module" src="js/i18n.js"></script>
+  <script type="module" src="js/listing-detail.js"></script>
+</body>
+
+</html>

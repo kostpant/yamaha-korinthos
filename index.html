@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>YAMAHA Motodesign Corinth | Premium Motorcycles & Scooters Greece</title>
+  <meta name="description"
+    content="Official YAMAHA dealer in Corinth, Greece. Premium motorcycles, scooters, expert service, and financing. Serving Central Greece since 1998.">
+  <meta name="keywords" content="YAMAHA, motorcycles, Corinth, Greece, Κόρινθος, μοτοσυκλέτες, scooter, moto">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="YAMAHA Motodesign Corinth | Premium Motorcycles Greece">
+  <meta property="og:description"
+    content="Official YAMAHA dealer in Corinth. Premium motorcycles and expert service since 1998.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yamaha-motodesign.gr">
+  <meta property="og:image" content="assets/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/hero.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.svg">
+</head>
+
+<body>
+
+  <!-- ═════════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="navbar navbar-transparent" id="navbar">
+    <div class="container navbar-container">
+      <!-- Logo -->
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo" style="display: flex; align-items: center; gap: 8px;">
+        <img src="/assets/favicon.ico" alt="YAMAHA" style="width: 24px; height: 24px;">
+        <span style="font-weight: 700; font-size: 18px; font-family: 'Playfair Display', serif;">
+          YAMAHA Motodesign
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="navbar-link active" data-i18n="nav.home">Home</a></li>
+        <li><a href="listings.html" class="navbar-link" data-i18n="nav.inventory">Motorcycles</a></li>
+        <li><a href="about.html" class="navbar-link" data-i18n="nav.about">About Us</a></li>
+        <li><a href="contact.html" class="navbar-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+          <button data-lang="en" class="lang-btn">EN</button>
+          <button data-lang="gr" class="lang-btn active">GR</button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link" data-i18n="nav.home">Home</a>
+      <a href="listings.html" class="mobile-menu-link" data-i18n="nav.inventory">Motorcycles</a>
+      <a href="about.html" class="mobile-menu-link" data-i18n="nav.about">About Us</a>
+      <a href="contact.html" class="mobile-menu-link" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Background -->
+    <div class="hero-background">
+      <img src="assets/hero-bg.jpg" alt="YAMAHA Motorcycle" loading="eager">
+    </div>
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <h1 class="hero-title" data-i18n="hero.title">Find Your Perfect Ride</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Premium YAMAHA motorcycles and scooters in Corinth, Greece</p>
+
+      <div class="hero-actions">
+        <a href="listings.html" class="btn btn-primary btn-lg" data-i18n="hero.cta_primary">View Inventory</a>
+        <a href="contact.html" class="btn btn-outline btn-lg" data-i18n="hero.cta_secondary">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero-scroll-indicator">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════════════════════════════════════
+       FEATURED MOTORCYCLES
+       ═══════════════════════════════════════════════════════ -->
+  <section class="section" style="background-color: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2 class="mb-3" data-i18n="featured.title">Featured Motorcycles</h2>
+        <p class="text-muted" data-i18n="featured.subtitle">Handpicked from our premium collection</p>
+      </div>
+
+      <!-- Featured Grid (populated by JS) -->
+      <div id="featured-grid" class="grid grid-3">
+        <!-- Skeleton loading cards -->
+        <div class="card">
+          <div class="skeleton skeleton-card-image"></div>
+          <div class="card-body">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width: 60%;"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="skeleton skeleton-card-image"></div>
+          <div class="card-body">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width: 60%;"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="skeleton skeleton-card-image"></div>
+          <div class="card-body">
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text" style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="listings.html" class="btn btn-secondary btn-lg" data-i18n="featured.view_all">View All Motorcycles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════════════════════════════════════
+       STATS SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3 text-center">
+        <div>
+          <div class="text-4xl text-display" style="color: var(--yamaha-red); font-weight: 700;">44+</div>
+          <p class="text-muted mt-2" data-i18n="stats.models">Models Available</p>
+        </div>
+        <div>
+          <div class="text-4xl text-display" style="color: var(--yamaha-red); font-weight: 700;">25+</div>
+          <p class="text-muted mt-2" data-i18n="stats.years">Years in Business</p>
+        </div>
+        <div>
+          <div class="text-4xl text-display" style="color: var(--yamaha-red); font-weight: 700;">1000+</div>
+          <p class="text-muted mt-2" data-i18n="stats.customers">Happy Customers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════════════════════════════════════
+       WHY CHOOSE US
+       ═══════════════════════════════════════════════════════ -->
+  <section class="section" style="background-color: var(--color-bg-dark); color: var(--color-text-inverse);">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2 class="mb-3" style="color: var(--color-text-inverse);" data-i18n="why_choose.title">Why Choose YAMAHA
+          Motodesign</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card"
+          style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+          <div class="card-body">
+            <h3 class="card-title mb-3" style="color: var(--yamaha-red);" data-i18n="why_choose.reason_1_title">
+              Authorized YAMAHA Dealer</h3>
+            <p class="card-text" style="color: var(--color-bg-secondary);" data-i18n="why_choose.reason_1_text">Official
+              dealer with full manufacturer warranty and genuine parts</p>
+          </div>
+        </div>
+
+        <div class="card"
+          style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+          <div class="card-body">
+            <h3 class="card-title mb-3" style="color: var(--yamaha-red);" data-i18n="why_choose.reason_2_title">Expert
+              Service</h3>
+            <p class="card-text" style="color: var(--color-bg-secondary);" data-i18n="why_choose.reason_2_text">
+              Factory-trained technicians ensuring top-quality maintenance</p>
+          </div>
+        </div>
+
+        <div class="card"
+          style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+          <div class="card-body">
+            <h3 class="card-title mb-3" style="color: var(--yamaha-red);" data-i18n="why_choose.reason_3_title">
+              Financing Available</h3>
+            <p class="card-text" style="color: var(--color-bg-secondary);" data-i18n="why_choose.reason_3_text">Flexible
+              payment plans to make your dream bike affordable</p>
+          </div>
+        </div>
+
+        <div class="card"
+          style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+          <div class="card-body">
+            <h3 class="card-title mb-3" style="color: var(--yamaha-red);" data-i18n="why_choose.reason_4_title">Local
+              Trust Since 1998</h3>
+            <p class="card-text" style="color: var(--color-bg-secondary);" data-i18n="why_choose.reason_4_text">Serving
+              the Corinth community for over 25 years</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="section" style="background-color: var(--carbon-black); color: var(--color-text-inverse);">
+    <div class="container">
+      <div class="grid grid-3 mb-8">
+        <!-- Brand -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: var(--space-4);">
+            <img src="/assets/favicon.ico" alt="YAMAHA" style="width: 24px; height: 24px;">
+            <span style="font-weight: 700; font-size: 18px; font-family: 'Playfair Display', serif; color: #FFFFFF;">
+              YAMAHA Motodesign
+            </span>
+          </div>
+          <p class="text-muted" data-i18n="footer.tagline" style="color: var(--color-bg-secondary);">Your trusted YAMAHA
+            dealer in Corinth since 1998</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="mb-4" data-i18n="footer.quick_links" style="color: var(--color-text-inverse);">Quick Links</h4>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-2);">
+            <li><a href="/" class="text-muted" style="color: var(--color-bg-secondary); transition: color 0.2s;"
+                data-i18n="nav.home">Home</a></li>
+            <li><a href="/inventory.html" class="text-muted"
+                style="color: var(--color-bg-secondary); transition: color 0.2s;"
+                data-i18n="nav.inventory">Motorcycles</a></li>
+            <li><a href="/about.html" class="text-muted"
+                style="color: var(--color-bg-secondary); transition: color 0.2s;" data-i18n="nav.about">About Us</a>
+            </li>
+            <li><a href="/contact.html" class="text-muted"
+                style="color: var(--color-bg-secondary); transition: color 0.2s;" data-i18n="nav.contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="mb-4" data-i18n="footer.contact_title" style="color: var(--color-text-inverse);">Contact Us</h4>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-2); color: var(--color-bg-secondary);">
+            <li>
+              <strong data-i18n="footer.address">Address:</strong><br>
+              Πατρών 60, Κόρινθος 20100
+            </li>
+            <li>
+              <strong data-i18n="footer.phone">Phone:</strong><br>
+              <a href="tel:+302741022979" style="color: var(--color-bg-secondary);">2741 022979</a>
+            </li>
+            <li>
+              <strong data-i18n="footer.email">Email:</strong><br>
+              <a href="mailto:motodesign@yahoo.gr" style="color: var(--color-bg-secondary);">motodesign@yahoo.gr</a>
+            </li>
+            <li>
+              <strong data-i18n="footer.hours">Business Hours:</strong><br>
+              <span data-i18n="footer.hours_value">Mon-Fri: 9:00-17:00, Sat: 9:00-14:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="flex-between"
+        style="padding-top: var(--space-6); border-top: 1px solid rgba(255, 255, 255, 0.1); flex-wrap: wrap; gap: var(--space-4);">
+        <p class="text-muted" style="color: var(--color-bg-secondary); font-size: var(--text-sm);"
+          data-i18n="footer.copyright">© 2026 YAMAHA Motodesign. All rights reserved.</p>
+
+        <!-- Social Links -->
+        <div style="display: flex; gap: var(--space-4);">
+          <a href="https://www.facebook.com/YAMAHAKORINTHOS/" target="_blank" rel="noopener" aria-label="Facebook"
+            style="color: var(--color-bg-secondary);">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═════════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

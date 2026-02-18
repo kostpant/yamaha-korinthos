@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "inventory": "Motorcycles",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Find Your Perfect Ride",
+    "subtitle": "Premium YAMAHA motorcycles and scooters in Corinth, Greece",
+    "cta_primary": "View Inventory",
+    "cta_secondary": "Contact Us"
+  },
+  "featured": {
+    "title": "Featured Motorcycles",
+    "subtitle": "Handpicked from our premium collection",
+    "view_all": "View All Motorcycles"
+  },
+  "stats": {
+    "models": "Models Available",
+    "years": "Years in Business",
+    "customers": "Happy Customers"
+  },
+  "why_choose": {
+    "title": "Why Choose YAMAHA Motodesign",
+    "reason_1_title": "Authorized YAMAHA Dealer",
+    "reason_1_text": "Official dealer with full manufacturer warranty and genuine parts",
+    "reason_2_title": "Expert Service",
+    "reason_2_text": "Factory-trained technicians ensuring top-quality maintenance",
+    "reason_3_title": "Financing Available",
+    "reason_3_text": "Flexible payment plans to make your dream bike affordable",
+    "reason_4_title": "Local Trust Since 1998",
+    "reason_4_text": "Serving the Corinth community for over 25 years"
+  },
+  "listing": {
+    "condition_new": "New",
+    "condition_used": "Used",
+    "condition_demo": "Demo",
+    "year": "Year",
+    "price": "Price",
+    "mileage": "Mileage",
+    "engine": "Engine",
+    "category": "Category",
+    "color": "Color",
+    "contact_price": "Contact for Price",
+    "view_details": "View Details",
+    "featured_badge": "Featured",
+    "available": "Available"
+  },
+  "listings": {
+    "all": "All",
+    "all_cc": "All Capacities",
+    "scooter": "Scooter",
+    "naked": "Naked",
+    "sport": "Sport"
+  },
+  "footer": {
+    "tagline": "Your trusted YAMAHA dealer in Corinth since 1998",
+    "quick_links": "Quick Links",
+    "contact_title": "Contact Us",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Business Hours",
+    "hours_value": "Mon-Fri: 9:00-17:00, Sat: 9:00-14:00",
+    "follow_us": "Follow Us",
+    "copyright": "© 2026 YAMAHA Motodesign. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "no_results": "No motorcycles found.",
+    "back": "Back",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "km": "km"
+  }
+}

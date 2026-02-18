@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Contact Us | YAMAHA Motodesign Corinth</title>
+  <meta name="description"
+    content="Get in touch with YAMAHA Motodesign Corinth. Visit our showroom, call us, or send a message. We're here to help you find your perfect motorcycle.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/contact.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico">
+</head>
+
+<body>
+
+  <!-- ═════════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="navbar navbar-solid" id="navbar">
+    <div class="container navbar-container">
+      <a href="/index.html" class="navbar-logo" style="display: flex; align-items: center; gap: 8px;">
+        <img src="/assets/favicon.ico" alt="YAMAHA" style="width: 24px; height: 24px;">
+        <span style="font-weight: 700; font-size: 18px; font-family: 'Playfair Display', serif;">
+          YAMAHA Motodesign
+        </span>
+      </a>
+
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="navbar-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="listings.html" class="navbar-link" data-i18n="nav.inventory">Motorcycles</a></li>
+        <li><a href="about.html" class="navbar-link" data-i18n="nav.about">About Us</a></li>
+        <li><a href="contact.html" class="navbar-link active" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <div class="lang-toggle">
+          <button data-lang="en" class="lang-btn">EN</button>
+          <button data-lang="gr" class="lang-btn active">GR</button>
+        </div>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link" data-i18n="nav.home">Home</a>
+      <a href="listings.html" class="mobile-menu-link" data-i18n="nav.inventory">Motorcycles</a>
+      <a href="about.html" class="mobile-menu-link" data-i18n="nav.about">About Us</a>
+      <a href="contact.html" class="mobile-menu-link" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════
+       PAGE HERO
+       ═══════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="container">
+      <h1 class="page-hero-title" data-i18n="contact.page_title">Contact Us</h1>
+      <p class="page-hero-subtitle" data-i18n="contact.page_subtitle">We're here to help you find your perfect
+        motorcycle</p>
+    </div>
+  </section>
+
+  <!-- ═════════════════════════════════════════════════════════
+       CONTACT LAYOUT
+       ═══════════════════════════════════════════════════════ -->
+  <main class="contact-section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: Contact Form -->
+        <div class="contact-form-wrapper">
+          <div class="contact-form-card">
+            <h2 data-i18n="contact.form_title">Send us a message</h2>
+            <p class="form-subtitle" data-i18n="contact.form_subtitle">Fill out the form below and we'll get back to you
+            </p>
+
+            <form id="contactForm" novalidate>
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullName" data-i18n="contact.full_name">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" class="form-input" required>
+                <span class="form-error" id="error-fullName" data-i18n="contact.error_name">Please enter your full
+                  name</span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email" data-i18n="contact.email">Email *</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+                <span class="form-error" id="error-email" data-i18n="contact.error_email">Please enter a valid
+                  email</span>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone" data-i18n="contact.phone">Phone</label>
+                <input type="tel" id="phone" name="phone" class="form-input">
+              </div>
+
+              <!-- Subject -->
+              <div class="form-group">
+                <label for="subject" data-i18n="contact.subject">Subject</label>
+                <select id="subject" name="subject" class="form-input form-select">
+                  <option value="inquiry" data-i18n="contact.subject_inquiry">Inquiry about a motorcycle</option>
+                  <option value="testride" data-i18n="contact.subject_testride">Test ride request</option>
+                  <option value="financing" data-i18n="contact.subject_financing">Financing question</option>
+                  <option value="general" data-i18n="contact.subject_general">General question</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message" data-i18n="contact.message">Message *</label>
+                <textarea id="message" name="message" class="form-input" rows="5" required></textarea>
+                <span class="form-error" id="error-message" data-i18n="contact.error_message">Please enter your
+                  message</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn-submit" data-i18n="contact.send_button">Send Message</button>
+
+              <!-- Success Message -->
+              <div class="form-success" id="formSuccess">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span data-i18n="contact.success_message">Thank you! Your message has been sent.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: Info Cards -->
+        <div class="info-cards">
+
+          <!-- Address -->
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="info-card-content">
+              <h3 data-i18n="contact.address_title">Address</h3>
+              <p>Πατρών 60, Κόρινθος 20100</p>
+              <a href="https://maps.google.com/?q=Πατρών+60+Κόρινθος" target="_blank" rel="noopener"
+                class="info-card-link" data-i18n="contact.view_map">View on Google Maps</a>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <div class="info-card-content">
+              <h3 data-i18n="contact.phone_title">Phone</h3>
+              <p>2741022979</p>
+              <a href="tel:+302741022979" class="info-card-link" data-i18n="contact.call_now">Call Now</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="info-card-content">
+              <h3 data-i18n="contact.email_title">Email</h3>
+              <p>motodesign@yahoo.gr</p>
+              <a href="mailto:motodesign@yahoo.gr" class="info-card-link" data-i18n="contact.send_email">Send Email</a>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="info-card-content">
+              <h3 data-i18n="contact.hours_title">Business Hours</h3>
+              <p data-i18n="contact.hours_weekdays">Δευτ-Παρ: 09:00–19:00</p>
+              <p data-i18n="contact.hours_saturday">Σάββατο: 09:00–14:00</p>
+              <p data-i18n="contact.hours_sunday">Κυριακή: Κλειστά</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════════
+       FULL WIDTH MAP
+       ═══════════════════════════════════════════════════════ -->
+  <section class="map-fullwidth">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.563648135035!2d22.9296!3d37.9359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDU2JzA5LjIiTiAyMsKwNTUnNDYuNiJF!5e0!3m2!1sen!2sgr!4v1609459200000!5m2!1sen!2sgr"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" title="YAMAHA Motodesign Location">
+    </iframe>
+  </section>
+
+  <!-- ═════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo" style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+            <img src="/assets/favicon.ico" alt="YAMAHA" style="width: 24px; height: 24px;">
+            <span style="font-weight: 700; font-size: 18px; font-family: 'Playfair Display', serif; color: #FFFFFF;">
+              YAMAHA Motodesign
+            </span>
+          </div>
+          <p class="footer-tagline" data-i18n="footer.tagline">Your trusted YAMAHA dealer in Corinth since 1998</p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-i18n="footer.quick_links">Quick Links</h4>
+          <ul>
+            <li><a href="/" data-i18n="nav.home">Home</a></li>
+            <li><a href="/listings.html" data-i18n="nav.inventory">Motorcycles</a></li>
+            <li><a href="/about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 data-i18n="footer.contact_title">Contact Us</h4>
+          <ul>
+            <li>
+              <strong data-i18n="footer.address">Address:</strong><br>
+              Πατρών 60, Κόρινθος 20100
+            </li>
+            <li>
+              <strong data-i18n="footer.phone">Phone:</strong><br>
+              <a href="tel:+302741022979">2741 022979</a>
+            </li>
+            <li>
+              <strong data-i18n="footer.email">Email:</strong><br>
+              <a href="mailto:motodesign@yahoo.gr">motodesign@yahoo.gr</a>
+            </li>
+            <li>
+              <strong data-i18n="footer.hours">Business Hours:</strong><br>
+              <span data-i18n="footer.hours_value">Mon-Fri: 9:00-17:00, Sat: 9:00-14:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 YAMAHA Motodesign. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/YAMAHAKORINTHOS/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/302741022979" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ═════════════════════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script type="module" src="./js/config.js"></script>
+  <script type="module" src="./js/i18n.js"></script>
+  <script type="module" src="./js/contact.js"></script>
+</body>
+
+</html>

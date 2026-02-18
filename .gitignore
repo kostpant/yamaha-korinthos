@@ -1,0 +1,15 @@
+# AI and Agent files
+.agent/
+.gemini/
+role.txt
+instructions.txt
+
+# Backups and staging
+backup_staging/
+
+# Node modules (just in case)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
