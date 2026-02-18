@@ -112,7 +112,7 @@ function createBikeCard(bike) {
     card.style.cursor = 'pointer';
     card.onclick = function () {
         const bikeId = this.getAttribute('data-bike-id');
-        window.location.href = 'listing?id=' + bikeId;
+        window.location.href = 'listing.html?id=' + bikeId;
     };
 
     const title = getLocalizedField(bike, 'title', lang);
@@ -147,7 +147,7 @@ function createBikeCard(bike) {
         btn.onclick = function (e) {
             e.stopPropagation();
             const bikeId = this.closest('.card').getAttribute('data-bike-id');
-            window.location.href = 'listing?id=' + bikeId;
+            window.location.href = 'listing.html?id=' + bikeId;
         };
     }
 

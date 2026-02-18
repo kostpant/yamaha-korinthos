@@ -202,7 +202,7 @@ function createCard(bike, lang) {
   card.style.cursor = 'pointer';
   card.onclick = function () {
     const bikeId = this.getAttribute('data-bike-id');
-    window.location.href = 'listing?id=' + bikeId;
+    window.location.href = 'listing.html?id=' + bikeId;
   };
 
   const title = getLocalizedField(bike, 'title', lang);

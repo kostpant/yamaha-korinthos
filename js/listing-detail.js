@@ -351,7 +351,7 @@ function renderRelated(bikes) {
       '/assets/placeholder.jpg';
 
     return `
-      <div class="bike-card" onclick="window.location.href='listing?id=${bike.id}'" style="cursor: pointer;">
+      <div class="bike-card" onclick="window.location.href='listing.html?id=${bike.id}'" style="cursor: pointer;">
         <div class="bike-card__image">
           <img src="${imageUrl}"
                alt="${title}"
