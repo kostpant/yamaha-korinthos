@@ -61,6 +61,12 @@ function applyTranslations() {
             // Handle different element types
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = value;
+            } else if (element.tagName === 'IMG') {
+                element.alt = value;
+            } else if (element.tagName === 'META') {
+                element.setAttribute('content', value);
+            } else if (element.tagName === 'TITLE') {
+                document.title = value;
             } else if (element.hasAttribute('aria-label')) {
                 element.setAttribute('aria-label', value);
             } else {
